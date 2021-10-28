@@ -1,7 +1,7 @@
-[19:00] Carlos Alberto Olvera RODRIGUEZ
-#codeupdate123tes26123estr3
+#codeupdate123tes26123CAOR
 import json
 import boto3
+pipeline = boto3.client('codepipeline')
 """from PyPDF4 import PdfFileReader, PdfFileWriter
 import os
 from io import BytesIO
@@ -30,8 +30,14 @@ def rds_connection():
 def lambda_handler(event, context):
     # bucket = event['bucket_name']
     # key = event['file_name']
-    bucket = event['Records'][0]['s3']['bucket']['name']
-    key = event['Records'][0]['s3']['object']['key']
+    # bucket = event['Records'][0]['s3']['bucket']['name']
+    # key = event['Records'][0]['s3']['object']['key']
+    print('text sample')
+
+    response = pipeline.put_job_success_result(
+        jobId=event['CodePipeline.job']['id']
+    )
+    return response
 
     """# RDS Connection
     conn = rds_connection()
@@ -123,5 +129,3 @@ def lambda_handler(event, context):
             cursor.close()
             conn.close()
             logger.info("RDS connection is closed")"""
-
-
