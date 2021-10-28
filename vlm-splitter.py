@@ -34,7 +34,7 @@ def lambda_handler(event, context):
     # key = event['Records'][0]['s3']['object']['key']
     print('text sample')
     print('text sample2')
-
+    print('text sample3')
     response = pipeline.put_job_success_result(
         jobId=event['CodePipeline.job']['id']
     )
