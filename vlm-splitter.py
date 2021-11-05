@@ -32,7 +32,7 @@ def lambda_handler(event, context):
     # key = event['file_name']
     # bucket = event['Records'][0]['s3']['bucket']['name']
     # key = event['Records'][0]['s3']['object']['key']
-    print('text sample')
+    print('text sample1')
     print('text sample2')
     print('text sample3')
     print('text sample5.21')
