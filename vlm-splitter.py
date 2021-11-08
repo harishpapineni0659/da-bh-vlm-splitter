@@ -40,6 +40,7 @@ def lambda_handler(event, context):
     print('text sample5.25')
     print('text sample5.26')
     print('text sample5.27')
+    print('text sample5.28')
     response = pipeline.put_job_success_result(
         jobId=event['CodePipeline.job']['id']
     )
